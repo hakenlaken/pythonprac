@@ -11,7 +11,7 @@
 Пример:
 
 20200903_1/\
-    readme.txt\
+\   readme.txt\
     task1.py\
     task1.ini\
     data/\
