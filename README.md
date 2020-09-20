@@ -11,12 +11,12 @@
 Пример:
 
 20200903_1/\
-readme.txt\
-task1.py\
-task1.ini\
-data/\
-input1.txt\
-input2.txt\
+    readme.txt\
+    task1.py\
+    task1.ini\
+    data/\
+        input1.txt\
+        input2.txt
 
 
 Thx!
