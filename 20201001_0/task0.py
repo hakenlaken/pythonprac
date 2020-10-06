@@ -1,6 +1,6 @@
 # Задача_0: поиск Парето-фронта в двумерном пространстве
 def Pareto(inp):
-    for i in range(len(inp)-1):
+    for i in range(len(inp)):
         j = 0
         while Flag := nodom(inp[i], inp[j]):
             j += 1
