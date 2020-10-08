@@ -32,3 +32,4 @@ def Fun(x, w, A, B):
 
 
 print(Fun(s, w, masA, masB))
+print()

@@ -4,3 +4,4 @@ fmt = "{:>"+f"{L}"+"}"
 print(fmt)
 print(fmt.format(a))
 print(fmt.format(b))
+print()
