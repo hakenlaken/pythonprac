@@ -1,6 +1,6 @@
 from random import choice
-sogl = "йцкнгшщзхфвпрлджчсмтб"
-glas = "уеыаоэёяию"
+sogl = "йцкнгшщзхфвпрлджчсмтб".upper()
+glas = "уеыаоэёяию".upper()
 list = ["0", "1", "2"]
 N = int(input())
 i = 0
