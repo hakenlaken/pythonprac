@@ -1,0 +1,1 @@
+str(type(nestr("asasas")))+str(type(nestr("wwww").__neg__()))

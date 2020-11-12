@@ -1,0 +1,2 @@
+(nestr("abcd")+nestr("efg")).__neg__()
+
