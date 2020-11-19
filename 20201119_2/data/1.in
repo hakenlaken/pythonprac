@@ -1,0 +1,5 @@
+c = C("Obj")
+c.data = 100500
+print(c.data)
+c.data = "asdasdasdasd"
+print(c.data)

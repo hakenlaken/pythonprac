@@ -1,0 +1,11 @@
+@genf
+def fun():
+    pass
+
+
+fun()
+fun()
+fun()
+fun()
+fun()
+
