@@ -9,7 +9,7 @@ class Dsc:
     def __set__(self, obj, val):
         try:
             if hasattr(val, "__int__"):
-                obj._value = val
+                obj._value = val.conjugate()
             else:
                 obj._value = len(val)
         except Exception:

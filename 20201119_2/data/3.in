@@ -1,0 +1,3 @@
+ccc = C("OBG")
+ccc.data = {'a':4, 'b': 5}
+print(ccc.data)

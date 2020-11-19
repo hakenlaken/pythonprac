@@ -1,0 +1,5 @@
+cc = C("trying range")
+cc.data = 1
+print(cc.data)
+cc.data = range(3,111,3)
+print(cc.data)

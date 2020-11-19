@@ -1,0 +1,8 @@
+@genf
+def fun():
+    pass
+
+
+for i in range(1,10):
+	print("its index --",i)
+	fun()

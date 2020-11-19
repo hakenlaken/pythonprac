@@ -1,0 +1,13 @@
+@genf
+def fun():
+    pass
+
+fun()
+fun()
+fun()
+print("проверка на то является ли переменная counter глобальной")
+try:
+    print(count)
+    print("ДА! Глобальная! И это плохо!")
+except Exception:
+    print("Нет, все хорошо! Она описана в декораторе!")
