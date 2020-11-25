@@ -3,15 +3,15 @@ from functools import wraps
 import sys
 
 
-def genf(f):
+def deccount(f):
     counter = 0
 
     @wraps(f)
-    def newfun(*args):
+    def newfun(*args, **kwargs):
         nonlocal counter
         counter += 1
         print(counter)
-        return f(*args)
+        return f(*args, **kwargs)
     return newfun
 
 

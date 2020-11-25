@@ -2,28 +2,20 @@
 import sys
 
 
-class Dsc:
+class Num:
     def __get__(self, obj, cls):
-        return obj._value
+        try:
+            return obj._value
+        except:
+            return 0
 
     def __set__(self, obj, val):
-        try:
-            if hasattr(val, "__int__"):
-                obj._value = val.conjugate()
-            else:
-                obj._value = len(val)
-        except Exception:
-            print("bad input")
-
-
-class C:
-    data = Dsc()
-
-    def __init__(self, name):
-        self.name = name
-
-    def __str__(self):
-        return f"<{self.name}>"
+        if hasattr(val, "__int__"):
+            obj._value = val.conjugate()
+        elif hasattr(val, "__len__"):
+            obj._value = len(val)
+        else:
+            obj._value = 0
 
 
 exec(sys.stdin.read())

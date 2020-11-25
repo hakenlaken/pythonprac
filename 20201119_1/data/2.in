@@ -1,4 +1,4 @@
-@genf
+@deccount
 def fun():
     pass
 

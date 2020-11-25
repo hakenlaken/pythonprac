@@ -1,3 +1,12 @@
+class C:
+    data = Num()
+
+    def __init__(self, name):
+        self.name = name
+
+    def __str__(self):
+        return f"<{self.name}>"
+
 c = C("Obj")
 c.data = 100500
 print(c.data)
