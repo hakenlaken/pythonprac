@@ -1,0 +1,8 @@
+True
+False
+a.mult([2])=[2, 2, 2], b.mult(2)='QWEQWE'
+True
+False
+a.__annotations__={'A': <class 'int'>}
+a.mult.__annotations__={'return': <class 'str'>}
+{'param': <class 'int'>, 'signed': <class 'bool'>}

@@ -1,0 +1,8 @@
+__init__: (3,), {}
+__init__: ('QWE',), {}
+mult: ([2],), {}
+mult: (2,), {}
+a.mult([2])=[2, 2, 2], b.mult(2)='QWEQWE'
+a.__annotations__={'A': <class 'int'>}
+a.mult.__annotations__={}
+{}

@@ -1,0 +1,36 @@
+class E(metaclass=dump):
+    def __init__(self, var: int):
+        self.var = var if var%2 else str(var)
+
+    def mix(self, val: int, opt) -> int:
+        return self.var*val + opt
+
+    def al(self, c: int, d:int=1, *e:int, f:int=1, **g:int):
+        return self.var*d
+
+e1, e2 = E(1), E(2)
+code = """
+e1.mix("q", "q")
+e1.mix(2, 3)
+e2.mix(2, "3")
+e1.al("q")
+e1.al(1, 2, 3, 4, 5, 6, foo=7, bar=8)
+e2.al(1, 2, 3, 4, 5, 6, foo=7, bar=8)
+e1.al("E", 2, 3, 4, 5, 6, foo=7, bar=8)
+e1.al(1, "E", 3, 4, 5, 6, foo=7, bar=8)
+e1.al(1, 2, "E", 4, 5, 6, foo=7, bar=8)
+e1.al(1, 2, 3, "E", 5, 6, foo="7", bar=8)
+e1.al(1, f="E", d=1)
+e1.al(1, f=1, d="E")
+e1.al(1, f="E", d="1")
+e1.al(1, d="E", f="1")
+e1.al(1, e="E")
+e1.al(1, g="E")
+"""
+
+for c in code.strip().split("\n"):
+    try:
+        res = eval(c)
+    except TypeError as E:
+        res = E
+    print(f"{res}")

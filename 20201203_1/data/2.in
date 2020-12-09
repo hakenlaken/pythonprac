@@ -1,0 +1,14 @@
+class C(metaclass=dump):
+    A: int = 2
+    def __init__(self, param: int = None, signed: bool = True):
+        if param != None:
+            self.A = param if signed else abs(param)
+
+    def mult(self, mlt) -> str:
+        return self.A * mlt
+
+a, b = C(3), C("QWE")
+print(f"{a.mult([2])=}, {b.mult(2)=}")
+print(f"{a.__annotations__=}")
+print(f"{a.mult.__annotations__=}")
+print(f"{C.__init__.__annotations__}")

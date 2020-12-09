@@ -1,3 +1,6 @@
+import sys
+
+
 class dump(type):
     def __init__(self, *ap, **an):
         import types
@@ -23,14 +26,4 @@ class dump(type):
     #    super().__call__(*ap, **an)
 
 
-class C(metaclass=dump):
-    def __init__(self, val):
-        self.val = val
-
-    def add(self, other, another=None):
-        return self.val + other + (another or self.val)
-
-
-c = C(10)
-print(c.add(9))
-print(c.add(9, another=10))
+exec(sys.stdin.read())
