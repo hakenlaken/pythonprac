@@ -15,7 +15,7 @@
     task1.py
     task1.ini
     data/
-    1.in
+        1.in
         2.in
         1.out
         2.out
