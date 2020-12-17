@@ -4,7 +4,6 @@ import asyncio
 Src = eval(input())
 futures = {}
 Tmp = Src.copy()
-print(Src)
 
 
 async def merge(From1, To1, To2):
