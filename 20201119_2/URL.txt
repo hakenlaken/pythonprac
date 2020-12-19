@@ -1,1 +1,4 @@
 https://github.com/Disfavour/pythonprac/tree/master/20201119_2/data
+https://git.cs.msu.ru/s02180027/pythonprac/-/tree/master/20201119_2/data
+https://git.cs.msu.ru/s02180538/pythonprac/-/tree/master/20201119_2/data
+https://git.cs.msu.ru/s02180570/pythonprac/-/tree/master/20201119_2/data
