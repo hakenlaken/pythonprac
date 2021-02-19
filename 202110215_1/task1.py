@@ -8,7 +8,7 @@ def upload_view():
     	<h1>Made by hakenlaken</h1>
         <form action="/" method="post">
           <label for="string">String:</label>
-          <input type="text" id="string" name="string"">
+          <input type="text" id="string" name="string" value="12345abc">
           <label for="font">Font in Pyfiglet:</label>
           <select id="font" name="font">
           	<option disabled>Select font</option>
@@ -27,8 +27,7 @@ def upload_view():
 def do_upload():
     string = request.forms.get('string')
     font = request.forms.get('font')
-    print(string,font)
-    if string is not None and font is not None:
+    if string is not None:
     	result = pyfiglet.figlet_format(string, font = font )
     	return template("""
     		<p></p>
