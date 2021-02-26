@@ -17,8 +17,8 @@ class Application(tk.Frame):
         self.quitButton = tk.Button(self, text='Quit', command=self.quit)
         self.timeLabel = tk.Label(self, text='<time>')
         self.timeButton.grid()
-        self.quitButton.grid()
-        self.timeLabel.grid()
+        self.quitButton.grid(row=0, column=1)
+        self.timeLabel.grid(columnspan=2)
 
 
 app = Application()
