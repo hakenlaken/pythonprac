@@ -8,8 +8,12 @@ class Application(tk.Frame):
         self.grid()
         self.createWidgets()
 
+    def doexit(self):
+        """ заглушка обработчика нажатия Exit """
+        pass
+
     def createWidgets(self):
-        self.quitButton = tk.Button(self, text='Exit', command=self.quit)
+        self.quitButton = tk.Button(self, text='Exit', command=self.doexit)
         self.quitButton.grid()
 
 
