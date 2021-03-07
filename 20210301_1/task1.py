@@ -13,7 +13,8 @@ class Application(tk.Frame):
 
     def nextitem_handler(self):
         """ заглушка обработчика нажатия Next item """
-        pass
+        self.choice.set(self.optionlist[(self.optionlist.index(
+            self.choice.get()) + 1) % len(self.optionlist)])
 
     def createWidgets(self):
         self.choice = tk.StringVar()
