@@ -17,7 +17,7 @@ class Application(tk.Frame):
 
     def createWidgets(self):
         self.choice = tk.StringVar()
-        self.optionlist = ('One', 'Two', 'Three')
+        self.optionlist = ('One', 'Two', 'Three', 'Four')
         self.choice.set(self.optionlist[0])
         self.quitButton = tk.Button(self, text='Exit', command=self.doexit)
         self.nextitemButton = tk.Button(self, text='Next item', command=self.nextitem_handler)
