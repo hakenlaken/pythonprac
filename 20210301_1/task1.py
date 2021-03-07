@@ -14,6 +14,8 @@ class Application(tk.Frame):
 
     def createWidgets(self):
         self.quitButton = tk.Button(self, text='Exit', command=self.doexit)
+        self.menuLabel = tk.Label(self, text='<MenuItem>')
+        self.menuLabel.grid()
         self.quitButton.grid()
 
 
