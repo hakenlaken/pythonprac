@@ -9,11 +9,11 @@ class Application(tk.Frame):
         self.createWidgets()
 
     def doexit(self):
-        """ заглушка обработчика нажатия Exit """
-        pass
+        self.quit()
 
     def nextitem_handler(self):
         """ заглушка обработчика нажатия Next item """
+        pass
 
     def createWidgets(self):
         self.choice = tk.StringVar()
