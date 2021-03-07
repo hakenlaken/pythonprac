@@ -12,9 +12,14 @@ class Application(tk.Frame):
         """ заглушка обработчика нажатия Exit """
         pass
 
+    def nextitem_handler(self):
+        """ заглушка обработчика нажатия Next item """
+
     def createWidgets(self):
         self.quitButton = tk.Button(self, text='Exit', command=self.doexit)
+        self.nextitemButton = tk.Button(self, text='Next item', command=self.nextitem_handler)
         self.menuLabel = tk.Label(self, text='<MenuItem>')
+        self.nextitemButton.grid()
         self.menuLabel.grid()
         self.quitButton.grid()
 
