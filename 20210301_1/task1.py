@@ -16,11 +16,16 @@ class Application(tk.Frame):
         """ заглушка обработчика нажатия Next item """
 
     def createWidgets(self):
+        self.choice = tk.StringVar()
+        self.optionlist = ('One', 'Two', 'Three')
+        self.choice.set(self.optionlist[0])
         self.quitButton = tk.Button(self, text='Exit', command=self.doexit)
         self.nextitemButton = tk.Button(self, text='Next item', command=self.nextitem_handler)
-        self.menuLabel = tk.Label(self, text='<MenuItem>')
-        self.nextitemButton.grid()
+        self.dropMenu = tk.OptionMenu(self, self.choice, *self.optionlist)
+        self.menuLabel = tk.Label(self, textvariable=self.choice)
         self.menuLabel.grid()
+        self.nextitemButton.grid()
+        self.dropMenu.grid()
         self.quitButton.grid()
 
 
