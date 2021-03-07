@@ -31,5 +31,5 @@ class Application(tk.Frame):
 
 
 app = Application()
-app.master.title('Task 1')
+app.master.title('Task 1 done')
 app.mainloop()
