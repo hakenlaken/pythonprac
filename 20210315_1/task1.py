@@ -2,9 +2,8 @@
 Tkinter skeleton app
 '''
 import tkinter as tk
-from itertools import product
-
-flag = True
+import re
+# from itertools import product
 
 
 class Application(tk.Frame):
@@ -13,6 +12,7 @@ class Application(tk.Frame):
     def __init__(self, master=None, title="<application>", **kwargs):
         '''Create root window with frame, tune weight and resize'''
         super().__init__(master, **kwargs)
+        self.pattern = re.compile(r"[-+]?(?:(?:\d*\.\d+)|(?:\d+\.?))?")
         self.master.title(title)
         self.master.columnconfigure(0, weight=1)
         self.master.rowconfigure(0, weight=1)
@@ -29,23 +29,35 @@ class Application(tk.Frame):
 
 class App(Application):
     def create_widgets(self):
-        alpha = self.register(self.alpha)
         self.S = tk.StringVar()
-        self.E = tk.Entry(self, textvariable=self.S,
-                          validate='all', validatecommand=(alpha, '%P'))
-        self.E.grid(columnspan=2)
-        self.L = tk.Label(self, text="Lower letters only")
+        self.S.set("")
+        vcmd = (self.register(self.validate_username), "%i", "%P")
+        self.E = tk.Entry(self, validate="key",
+                          validatecommand=vcmd,
+                          invalidcommand=self.print_error, textvariable=self.S)
+        self.E.grid(row=0, columnspan=2)
+        self.L = tk.Label(self, text="float numbers")
         self.L.grid(row=1, column=0)
-        self.Q = tk.Button(self, text="Quit", command=self.master.quit)
+        self.Q = tk.Button(self, text="Quit", command=self.quit_handler)
         self.Q.grid(row=1, column=1)
 
-    def alpha(self, P):
-        # print(f"{why}: '{txt}'")
-        if str.isdigit(P) or P == "":
-            return True
+    def validate_username(self, index, username):
+        '''entry validation'''
+        # print("Modification at index " + index)
+        return self.pattern.fullmatch(username) is not None
+
+    def print_error(self):
+        '''error validation'''
+        # print("Invalid username character")
+
+    def quit_handler(self):
+        answer = self.S.get()
+        if answer in ["", "-", "+"]:
+            print(0)
         else:
-            return False
+            print(eval(answer))
+        self.quit()
 
 
-app = App(title="Sample application")
+app = App(title="task1.py")
 app.mainloop()
