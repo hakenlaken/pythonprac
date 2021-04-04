@@ -1,0 +1,22 @@
+From efc9d68e1951c6c7dea247bbeec973799fb0c656 Mon Sep 17 00:00:00 2001
+From: Andrey Larin <hakenlaken1@gmail.com>
+Date: Sun, 4 Apr 2021 23:30:15 +0300
+Subject: [PATCH 2/3] edited 0 line
+
+---
+ 20210329_1/opilki.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/20210329_1/opilki.txt b/20210329_1/opilki.txt
+index a60b208..37ab9a8 100644
+--- a/20210329_1/opilki.txt
++++ b/20210329_1/opilki.txt
+@@ -1,4 +1,4 @@
+-Опять ничего не могу я понять.
++ОПЯТЬ НИЧЕГО НЕ МОГУ Я ПОНЯТЬ.
+ ОПИЛКИ МОИ – В БЕСПОРЯДКЕ.
+ Везде и повсюду, опять и опять
+ Меня окружают загадки.
+-- 
+2.24.3 (Apple Git-128)
+
