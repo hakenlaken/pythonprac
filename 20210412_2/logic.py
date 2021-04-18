@@ -1,16 +1,29 @@
-'''
-Tkinter skeleton app
-'''
+"""
+Logic.py
+~~~~~~~~
+
+Skeleton application module.
+
+Provides base class for task2.py build.
+
+:copyright: (c) 2021 by Andrey Larin
+:license: MIT, see COPYING for more details.
+"""
 import tkinter as tk
-from itertools import product
 import re
 
 
+
 class Application(tk.Frame):
-    '''Sample tkinter application class'''
+    """
+    Sample tkinter application class.
+
+    :param master: master window (tkinter root if None)
+    :param title: application window title
+    """
 
     def __init__(self, master=None, title="<application>", **kwargs):
-        '''Create root window with frame, tune weight and resize'''
+        """Create root window with frame, tune weight and resize."""
         super().__init__(master, **kwargs)
         self.master.title(title)
         self.master.columnconfigure(0, weight=1)
@@ -23,7 +36,7 @@ class Application(tk.Frame):
                 self.rowconfigure(row, weight=1)
 
     def create_widgets(self):
-        '''Create all the widgets'''
+        """Create all the widgets."""
         self.choice = tk.StringVar()
         self.S = tk.StringVar()
         self.S.set("Default")
@@ -54,31 +67,14 @@ class Application(tk.Frame):
         self.SB.grid(row=1, column=3)
 
     def insert_handler(self):
+        """Insert Entry handler."""
         self.E.insert(tk.END, self.choice.get())
 
     def validate_word(self, index, username):
-        '''entry validation'''
+        """Entry validation."""
         # print("Modification at index " + index)
         return self.pattern.fullmatch(username) is not None
 
     def print_error(self):
-        '''error validation'''
+        """Error validation."""
         # print("Invalid username character")
-
-
-class App(Application):
-    def create_widgets(self):
-        super().create_widgets()
-
-
-def show_handler(self):
-    self.S.set(self.SforE.get())
-
-
-def main():
-    app = App(title="task2.py")
-    app.mainloop()
-
-
-if __name__ == "__main__":
-    main()
