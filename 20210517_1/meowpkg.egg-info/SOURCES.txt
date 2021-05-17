@@ -1,0 +1,6 @@
+pyproject.toml
+setup.cfg
+meowpkg.egg-info/PKG-INFO
+meowpkg.egg-info/SOURCES.txt
+meowpkg.egg-info/dependency_links.txt
+meowpkg.egg-info/top_level.txt
