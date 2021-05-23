@@ -1,0 +1,12 @@
+MANIFEST.in
+pyproject.toml
+setup.cfg
+test_task1.py
+po/ru/LC_MESSAGES/solve.po
+solve/__init__.py
+solve/__main__.py
+solve.egg-info/PKG-INFO
+solve.egg-info/SOURCES.txt
+solve.egg-info/dependency_links.txt
+solve.egg-info/requires.txt
+solve.egg-info/top_level.txt
